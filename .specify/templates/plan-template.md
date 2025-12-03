@@ -31,7 +31,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- **Gate 1 (Content Source)**: Does the plan originate from the "Physical AI & Humanoid Robotics" syllabus?
+- **Gate 2 (Modular Focus)**: Does the plan focus on a specific, prioritized module?
+- **Gate 3 (Verification)**: Does the plan include steps for verifying technical information using authoritative sources (per Principle III)?
+- **Gate 4 (Platform)**: Does the plan's proposed structure and implementation align with the Docusaurus platform?
+- **Gate 5 (Spec-Driven)**: Is there a corresponding `spec.md` that this plan is based on?
 
 ## Project Structure
 
