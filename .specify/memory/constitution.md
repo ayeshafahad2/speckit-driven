@@ -1,55 +1,46 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# Project Constitution: Integrated RAG Chatbot Development
 
-## Core Principles
+## 1. Core Mandate
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+The primary goal of this project is to develop and embed a Retrieval-Augmented Generation (RAG) chatbot within a published book. This chatbot will serve as an intelligent assistant, capable of answering user questions directly related to the book's content, including queries based on user-selected text excerpts.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+## 2. Key Technologies
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+The following technologies are central to the implementation of this project:
+*   **Chatbot Framework**: OpenAI Agents/ChatKit SDKs
+*   **Backend API**: FastAPI
+*   **Vector Database**: Qdrant Cloud Free Tier
+*   **Relational Database**: Neon Serverless Postgres
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+## 3. Core Functionality (Base Points - 100)
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+The base functionality, mandatory for achieving core points, includes:
 
-### [PRINCIPLE_6_NAME]
+*   **RAG Chatbot Integration**: Seamlessly embed the RAG chatbot within the published book.
+*   **Content-Aware Question Answering**: The chatbot must accurately answer user questions about the book's content.
+*   **Selected Text Query**: Enable users to select specific text within the book and pose questions based solely on that selection.
 
+## 4. Bonus Functionality (Extra Points)
 
-[PRINCIPLE__DESCRIPTION]
+Additional features that can earn bonus points include:
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### 4.1. Reusable Intelligence (50 Points)
+*   **Claude Code Subagents**: Implement and utilize reusable intelligence via Claude Code Subagents.
+*   **Agent Skills**: Develop and integrate Agent Skills within the book project to enhance chatbot capabilities.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### 4.2. User Authentication & Personalization (50 Points)
+*   **Signup and Signin**: Implement user authentication using Better-Auth.com.
+*   **User Profiling**: During signup, collect user's software and hardware background information.
+*   **Personalized Content**: Utilize collected user background to personalize book content.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### 4.3. In-Chapter Content Personalization (50 Points)
+*   **User-Driven Content Personalization**: Allow logged-in users to personalize content within chapters by pressing a dedicated button at the start of each chapter.
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### 4.4. In-Chapter Content Translation (50 Points)
+*   **Urdu Translation**: Enable logged-in users to translate chapter content into Urdu by pressing a dedicated button at the start of each chapter.
 
-## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+## 5. Constraints & Non-Goals
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+*   **Scope**: The project is strictly focused on the features and technologies outlined above. Any deviation requires explicit approval.
+*   **Deliverable**: The primary deliverable is a published book with an integrated and functional RAG chatbot.
+*   **Platform**: The implementation will leverage specified cloud services (Neon, Qdrant) and SDKs (OpenAI Agents/ChatKit).

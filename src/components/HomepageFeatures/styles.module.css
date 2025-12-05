@@ -9,3 +9,22 @@
   height: 200px;
   width: 200px;
 }
+
+.featureCard {
+  /* Basic styling for the card */
+  background-color: var(--ifm-background-color); /* Respect theme background */
+  border-radius: var(--ifm-border-radius);
+  padding: 1.5rem;
+  margin: 1rem; /* Space between cards */
+  box-shadow: var(--ifm-shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* Ensure cards are same height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push description to bottom */
+}
+
+.featureCard:hover {
+  transform: translateY(-2px); /* Lift effect on hover */
+  box-shadow: var(--ifm-shadow-lg); /* Stronger shadow on hover */
+}

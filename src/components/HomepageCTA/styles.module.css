@@ -1,0 +1,30 @@
+.homepageCta {
+  padding: 4rem 0;
+  background-color: var(--ifm-color-black); /* Dark background for CTA */
+  color: var(--ifm-color-white);
+  text-align: center;
+}
+
+.ctaHeading {
+  color: var(--ifm-color-primary); /* Purple heading */
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.ctaDescription {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Space between buttons */
+}
+
+.buttons .button {
+  min-width: 200px;
+}
