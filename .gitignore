@@ -3,3 +3,21 @@ node_modules
 build
 .cache-loader
 coverage
+.env
+
+# Python-specific ignores
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+*.egg-info/
+
+# Backend-specific ignores
+backend/__pycache__/
+backend/*.pyc
+backend/.venv/
+backend/venv/
+backend/dist/
+backend/*.egg-info/
+backend/.env

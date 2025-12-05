@@ -5,48 +5,54 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  img: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Module 1: The Robotic Nervous System (ROS 2)',
+    img: require('@site/static/img/one.png').default, // Placeholder SVG
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Master ROS 2 fundamentals: nodes, topics, services, and Python integration for robust robot control. Learn to define humanoid structures with URDF.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Module 2: The Digital Twin (Gazebo & Unity)',
+    img: require('@site/static/img/two.png').default, // Placeholder SVG
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Dive into realistic physics simulations with Gazebo and high-fidelity rendering/HRI in Unity. Simulate LiDAR, depth cameras, and IMUs for virtual robots.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Module 3: The AI-Robot Brain (NVIDIA Isaac™)',
+    img: require('@site/static/img/three.png').default, // Placeholder SVG
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Explore advanced AI perception and training with NVIDIA Isaac Sim for synthetic data, Isaac ROS for accelerated VSLAM, and Nav2 for humanoid path planning.
+      </>
+    ),
+  },
+  {
+    title: 'Module 4: Vision-Language-Action (VLA)',
+ img: require('@site/static/img/four.png').default, // Placeholder SVG
+    description: (
+      <>
+        Bridge LLMs and robotics: implement voice commands with OpenAI Whisper, cognitive planning, and complete a Capstone Project on autonomous humanoid interaction.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, img, description}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--6')}> {/* Changed to col--6 for 2 columns per row */}
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img className={styles.featureSvg} alt={title} src={img} role="img" />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

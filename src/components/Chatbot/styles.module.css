@@ -1,0 +1,84 @@
+.chatbotContainer {
+  display: flex;
+  flex-direction: column;
+  height: 600px; /* Fixed height for chat window */
+  border-radius: var(--ifm-border-radius);
+  overflow: hidden;
+  box-shadow: var(--ifm-shadow-lg);
+}
+
+.chatHeader {
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-color-white);
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.chatBody {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}
+
+.messagesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.message {
+  max-width: 70%;
+  padding: 0.75rem 1rem;
+  border-radius: 1.2rem;
+  word-wrap: break-word;
+}
+
+.user {
+  align-self: flex-end;
+  background-color: var(--ifm-color-primary-light);
+  color: var(--ifm-color-white);
+  border-bottom-right-radius: 0.2rem;
+}
+
+.chatbot {
+  align-self: flex-start;
+  background-color: var(--ifm-color-secondary); /* Using a secondary color for bot messages */
+  color: var(--ifm-font-color-base);
+  border-bottom-left-radius: 0.2rem;
+}
+
+.messageContent {
+  font-size: 0.95rem;
+}
+
+.messageTimestamp {
+  font-size: 0.75rem;
+  color: var(--ifm-color-secondary-dark); /* Lighter timestamp */
+  margin-top: 0.25rem;
+  text-align: right;
+}
+
+.chatInputContainer {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  background-color: var(--ifm-background-color);
+}
+
+.chatInput {
+  flex-grow: 1;
+  margin-right: 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-border-radius);
+  padding: 0.5rem 1rem;
+  background-color: var(--ifm-color-white); /* Ensure input is visible on dark theme */
+  color: var(--ifm-color-black); /* Ensure input text is visible */
+}
+
+.chatInput:focus {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px rgba(var(--ifm-color-primary-rgb), 0.2);
+}

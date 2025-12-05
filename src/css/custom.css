@@ -6,25 +6,95 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #8A2BE2; /* Vibrant Purple */
+  --ifm-color-primary-dark: #6A1FB8;
+  --ifm-color-primary-darker: #5A199E;
+  --ifm-color-primary-darkest: #3A1068;
+  --ifm-color-primary-light: #9B4DEB;
+  --ifm-color-primary-lighter: #A664F2;
+  --ifm-color-primary-lightest: #B27AF9;
+
+  --ifm-color-black: #1A1A1A; /* Near Black */
+  --ifm-color-white: #FFFFFF; /* Pure White */
+
+  /* Light Theme (User's White Theme) */
+  --ifm-background-color: var(--ifm-color-white); /* White background */
+  --ifm-font-color-base: var(--ifm-color-black); /* Black text */
+  --ifm-link-color: var(--ifm-color-primary); /* Purple links */
+  --ifm-link-hover-color: var(--ifm-color-primary-dark); /* Links darken on hover */
+
+
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark Theme (User's Black Theme) */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #B27AF9; /* Lighter Purple for dark mode */
+  --ifm-color-primary-dark: #9B4DEB;
+  --ifm-color-primary-darker: #8A2BE2;
+  --ifm-color-primary-darkest: #6A1FB8;
+  --ifm-color-primary-light: #C092FA;
+  --ifm-color-primary-lighter: #CCABFB;
+  --ifm-color-primary-lightest: #D8C3FC;
+
+  --ifm-color-black: #1A1A1A; /* Black, consistent */
+  --ifm-color-white: #FFFFFF; /* White, consistent */
+
+  --ifm-background-color: var(--ifm-color-black); /* Black background */
+  --ifm-font-color-base: var(--ifm-color-white); /* White text */
+  --ifm-link-color: var(--ifm-color-primary); /* Lighter purple links */
+  --ifm-link-hover-color: var(--ifm-color-primary-dark); /* Links darken on hover */
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.hero--dark {
+  background-color: var(--ifm-color-primary-darkest); /* Use the defined black color */
+  color: var(--ifm-color-white); /* Ensure text is white */
+}
+
+.hero--dark .hero__title,
+.hero--dark .hero__subtitle {
+  color: var(--ifm-color-white); /* Ensure title and subtitle are white */
+}
+
+.hero--dark .button--secondary {
+  color: var(--ifm-color-white);
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+.hero--dark .button--secondary:hover {
+  background-color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+}
+
+/* Custom hover styles */
+a {
+  transition: font-size 0.2s ease-in-out; /* Smooth transition for font size change */
+}
+
+a:hover {
+  color: inherit; /* Prevent color change on hover */
+  font-size: 1.02em; /* Increase font size by 5% on hover */
+}
+
+/* Footer improvements */
+.footer {
+  background-color: var(--ifm-color-black);
+  color: var(--ifm-font-color-base);
+  padding: 3rem 0; /* More padding */
+  border-top: 1px solid var(--ifm-color-primary); /* Subtle purple border */
+}
+
+.footer a {
+  color: var(--ifm-link-color); /* Purple links */
+  transition: font-size 0.1s ease-in-out;
+}
+
+.footer a:hover {
+  color: var(--ifm-link-color); /* Keep purple on hover */
+  font-size: 1.02em; /* Increase font size */
+}
+

@@ -1,0 +1,34 @@
+# Ignore .git directory
+.git
+
+# Ignore Dockerfile
+Dockerfile
+Dockerfile.*
+
+# Ignore .dockerignore itself
+.dockerignore
+
+# Ignore build artifacts
+*.pyc
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Ignore virtual environments
+.venv
+venv
+
+# Ignore local environment variables
+.env
+.env.*
+
+# Editor and IDE specific files
+.vscode
+.idea
+*.swp
+*.bak
+*.swo
+
+# Test related files
+tests/
